@@ -10,5 +10,5 @@ require 'simply_commentable/simply_commentable'
 # Equivalent of using "unloadable" in SurveyorController (unloadable has been deprecated)
 %w{models controllers}.each do |dir|
   path = File.expand_path(File.join(File.dirname(__FILE__), '../app', dir))
-  ActiveSupport::Dependencies.load_once_paths.delete(path)
+  ActiveSupport::Dependencies.autoload_once_paths.delete(path)
 end
