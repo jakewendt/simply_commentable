@@ -1,4 +1,4 @@
-module Simply::Commentable #:nodoc:
+module SimplyCommentable::Base
 
 	def self.included(base)
 		base.extend ClassMethods	
@@ -16,5 +16,7 @@ module Simply::Commentable #:nodoc:
 		end
 	end
 			
-end
-ActiveRecord::Base.send(:include, Simply::Commentable)
+end	#	module SimplyCommentable::Base
+
+require 'active_record'
+ActiveRecord::Base.send(:include, SimplyCommentable::Base)

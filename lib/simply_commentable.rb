@@ -1,8 +1,10 @@
-module Simply
-#	predefined namespace
+module SimplyCommentable
+#	predefine namespace
 end
-require 'simply_commentable/simply_commentable'
+require 'simply_commentable/base'
+require 'simply_commentable/assertions'
 
+require 'active_support'
 # From http://guides.rubyonrails.org/plugins.html#controllers
 # Fix for:
 # ArgumentError in SurveyorController#edit 
