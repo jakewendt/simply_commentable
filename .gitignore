@@ -4,7 +4,7 @@ versions
 .svn
 /config/aws_sdb_proxy.yml
 /config/backgroundrb.yml
-/config/database.yml
+#/config/database.yml
 /config/fed_ex.yml
 /config/flickr.yml
 /config/juggernaut.yml
@@ -19,3 +19,5 @@ versions
 /test/tmp/
 /tmp/
 /pkg/
+/config/initializers/cookie_verification_secret.rb
+/db/*.sqlite3
