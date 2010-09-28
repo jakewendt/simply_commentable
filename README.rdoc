@@ -6,6 +6,10 @@
    :lib    => 'simply_commentable', 
    :source => 'http://rubygems.org'
 
+== ToDo
+
+Import existing model tests.
+
 == Reference and Credits
 
 acts_as_commentable
