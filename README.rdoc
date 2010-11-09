@@ -17,7 +17,7 @@ Create generator to install the migrations, javascript, stylesheets, Rakefile, a
 Tests
 
 script/generate simply_commentable Post
-script/generate simply_commenter   User	<- maybe
+script/generate simply_commentable_commenter User	   <- maybe
 
 == Reference and Credits
 
