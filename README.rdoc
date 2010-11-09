@@ -12,9 +12,12 @@
 
 Import existing model tests.
 
-Create generator to install the migrations, javascript, stylesheets, Rakefile, autotest
+Create generator to install the migrations, javascript, stylesheets, Rakefile, autotest, initializers
 
 Tests
+
+script/generate simply_commentable Post
+script/generate simply_commenter   User	<- maybe
 
 == Reference and Credits
 
