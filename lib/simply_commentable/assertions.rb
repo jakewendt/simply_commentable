@@ -8,6 +8,11 @@ module SimplyCommentable::Assertions
 				assert true
 			end
 		end
+		def assert_simply_commentable_commenter
+			test "should be simply commentable commenter" do
+				assert true
+			end
+		end
 	end
 	module InstanceMethods
 	end
