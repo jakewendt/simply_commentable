@@ -1,7 +1,26 @@
 require 'test_helper'
 
-class CommentTest < ActiveSupport::TestCase
-	test "testing the tester" do
-		assert true
+class SimplyCommentable::CommentTest < ActiveSupport::TestCase
+
+#	make this work without :User
+#	assert_should_belong_to :commenter, :class_name => :User
+	assert_should_require :body
+	assert_should_not_protect_attribute :body
+	assert_should_protect_attribute :commenter_id
+	assert_should_protect_attribute :commenter_type
+	assert_should_protect_attribute :commentable_id
+	assert_should_protect_attribute :commentable_type
+
+	test "should find_comments_by_commenter" do
+pending
 	end
+
+	test "should find_comments_for_commentable" do
+pending
+	end
+
+	test "should find_commentable" do
+pending
+	end
+
 end

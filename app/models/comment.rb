@@ -1,10 +1,10 @@
 class Comment < ActiveRecord::Base
 	belongs_to :commenter,   :polymorphic => true, :counter_cache => true
 	belongs_to :commentable, :polymorphic => true, :counter_cache => true
+
+	validates_presence_of :body
 	
 	attr_accessible :body
-#:commenter_id, :commenter_type, 
-#		:commentable_id, :commentable_type, :body
 	
 	# Helper class method to lookup all comments assigned
 	# to all commentable types for a given commenter.

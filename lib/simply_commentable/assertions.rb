@@ -5,12 +5,12 @@ module SimplyCommentable::Assertions
 	module ClassMethods
 		def assert_simply_commentable
 			test "should be simply commentable" do
-				assert true
+				assert model_name.constantize.new.respond_to?(:comments)
 			end
 		end
 		def assert_simply_commentable_commenter
 			test "should be simply commentable commenter" do
-				assert true
+				assert model_name.constantize.new.respond_to?(:comments)
 			end
 		end
 	end

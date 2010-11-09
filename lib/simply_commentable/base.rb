@@ -5,8 +5,15 @@ module SimplyCommentable::Base
 	end
 
 	module ClassMethods
+		def simply_commentable_commenter
+
+			has_many :comments, 
+				:as => :commenter, 
+				:dependent => :destroy, 
+				:order => 'created_at ASC'
+
+		end
 		def simply_commentable
-#	add :by => :user
 
 			has_many :comments, 
 				:as => :commentable, 
