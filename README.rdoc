@@ -6,9 +6,15 @@
    :lib    => 'simply_commentable', 
    :source => 'http://rubygems.org'
 
+ script/generate simply_commentable
+
 == ToDo
 
 Import existing model tests.
+
+Create generator to install the migrations, javascript, stylesheets, Rakefile, autotest
+
+Tests
 
 == Reference and Credits
 

@@ -4,11 +4,11 @@ require 'rake/rdoctask'
 
 desc 'Generate documentation for the simply_commentable plugin.'
 Rake::RDocTask.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'SimplyCommentable'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+	rdoc.rdoc_dir = 'rdoc'
+	rdoc.title = 'SimplyCommentable'
+	rdoc.options << '--line-numbers' << '--inline-source'
+	rdoc.rdoc_files.include('README')
+	rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
 begin
@@ -38,10 +38,8 @@ rescue LoadError
 	puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
 end
 
-
-
 require(File.join(File.dirname(__FILE__), 'config', 'boot'))
 require 'rdoc'
 require 'rdoc/rdoc'
 require 'tasks/rails'
-require 'simply_commentable/tasks'
+#require 'simply_commentable/tasks'
