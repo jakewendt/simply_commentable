@@ -10,21 +10,23 @@ class SimplyCommentableGenerator < Rails::Generator::Base
 			m.directory('lib/tasks')
 			m.file('simply_commentable.rake', 'lib/tasks/simply_commentable.rake')
 
-#			%w( create_pages ).each do |migration|
-#				m.migration_template "migrations/#{migration}.rb",
-#					'db/migrate', :migration_file_name => migration
-#			end
-#
-#			m.directory('public/javascripts')
-#			Dir["#{File.dirname(__FILE__)}/templates/javascripts/*js"].each{|file| 
-#				f = file.split('/').slice(-2,2).join('/')
-#				m.file(f, "public/javascripts/#{File.basename(file)}")
-#			}
-#			m.directory('public/stylesheets')
-#			Dir["#{File.dirname(__FILE__)}/templates/stylesheets/*css"].each{|file| 
-#				f = file.split('/').slice(-2,2).join('/')
-#				m.file(f, "public/stylesheets/#{File.basename(file)}")
-#			}
+			%w( create_comments ).each do |migration|
+				m.migration_template "migrations/#{migration}.rb",
+					'db/migrate', :migration_file_name => migration
+			end
+
+			m.directory('public/javascripts')
+			Dir["#{File.dirname(__FILE__)}/templates/javascripts/*js"].each{|file| 
+				f = file.split('/').slice(-2,2).join('/')
+				m.file(f, "public/javascripts/#{File.basename(file)}")
+			}
+
+			m.directory('public/stylesheets')
+			Dir["#{File.dirname(__FILE__)}/templates/stylesheets/*css"].each{|file| 
+				f = file.split('/').slice(-2,2).join('/')
+				m.file(f, "public/stylesheets/#{File.basename(file)}")
+			}
+
 #			m.directory('test/functional/pages')
 #			Dir["#{File.dirname(__FILE__)}/templates/functional/*rb"].each{|file| 
 #				f = file.split('/').slice(-2,2).join('/')

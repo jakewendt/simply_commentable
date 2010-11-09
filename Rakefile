@@ -22,13 +22,16 @@ begin
 		gem.authors = ["George 'Jake' Wendt"]
 		# gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
 
-		gem.files = FileList['lib/**/*.rb','app/**/*.rb','db/**/*.rb']
+		gem.files  = FileList['config/routes.rb']
+		gem.files += FileList['app/**/*.rb']
+		gem.files += FileList['app/**/*.erb']
+		gem.files += FileList['lib/**/*.rb']
+		gem.files += FileList['lib/**/*.rake']
+		gem.files += FileList['generators/**/*']
+		gem.files -= FileList['**/versions/*']
 
-		gem.files -= FileList['db/migrate/*_test_only_*.rb']
-
-#		gem.files = FileList['lib/**/*.rb','bin/**/*.rb','templates/**/*.rb']
-#		gem.test_files = []
-#		gem.test_files -= FileList['test/test_helper.rb']
+		gem.test_files  = FileList['test/**/*.rb']
+		gem.test_files -= FileList['test/test_helper.rb']
 
 		gem.add_dependency('rails', '~> 2')
 
@@ -42,4 +45,3 @@ require(File.join(File.dirname(__FILE__), 'config', 'boot'))
 require 'rdoc'
 require 'rdoc/rdoc'
 require 'tasks/rails'
-#require 'simply_commentable/tasks'
