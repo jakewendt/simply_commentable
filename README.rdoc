@@ -6,18 +6,17 @@
    :lib    => 'simply_commentable', 
    :source => 'http://rubygems.org'
 
- script/generate simply_commentable
+ # Create generator to install the migrations, javascript, stylesheets, 
+ # Rakefile, autotest, initializers, factory initializer
+ #  config/initializer/simply_commentable_post
+ script/generate simply_commentable Post
+
+ #	Generator also creates factory initializer
+ #  config/initializer/simply_commentable_commenter_user
+ script/generate simply_commentable_commenter User
 
 == ToDo
 
-Import existing model tests.
-
-Create generator to install the migrations, javascript, stylesheets, Rakefile, autotest, initializers
-
-Tests
-
-script/generate simply_commentable Post
-script/generate simply_commentable_commenter User	   <- maybe
 
 == Reference and Credits
 

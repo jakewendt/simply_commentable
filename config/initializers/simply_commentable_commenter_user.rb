@@ -1,0 +1,1 @@
+User.simply_commentable_commenter

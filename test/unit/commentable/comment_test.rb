@@ -2,9 +2,11 @@ require 'test_helper'
 
 class SimplyCommentable::CommentTest < ActiveSupport::TestCase
 
-#	make this work without :User
-#	assert_should_belong_to :commenter, :class_name => :User
+	assert_should_belong_to :commenter, :polymorphic => true
+	assert_should_belong_to :commentable, :polymorphic => true
 	assert_should_require :body
+#	assert_should_require_attribute_length(:body,:in => 1..250)
+	assert_should_require_attribute_length(:body,:minimum => 1, :maximum => 250)
 	assert_should_not_protect_attribute :body
 	assert_should_protect_attribute :commenter_id
 	assert_should_protect_attribute :commenter_type
