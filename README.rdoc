@@ -3,7 +3,6 @@
 == Usage
 
  config.gem 'jakewendt-simply_commentable',
-   :lib    => 'simply_commentable', 
    :source => 'http://rubygems.org'
 
  # Create generator to install the migrations, javascript, stylesheets, 
@@ -22,3 +21,18 @@
 
 acts_as_commentable
 
+== Gemified with Jeweler
+
+ vi Rakefile
+ rake version:write
+
+ rake version:bump:patch
+ rake version:bump:minor
+ rake version:bump:major
+
+ rake gemspec
+
+ rake install
+ rake release
+
+Copyright (c) 2010 [Jake Wendt], released under the MIT license

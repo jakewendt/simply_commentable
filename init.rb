@@ -1,1 +1,1 @@
-require 'simply_commentable'
+require 'jakewendt-simply_commentable'
