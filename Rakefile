@@ -17,7 +17,7 @@ begin
 		gem.name = "jakewendt-simply_commentable"
 		gem.summary = %Q{one-line summary of your gem}
 		gem.description = %Q{longer description of your gem}
-		gem.email = "github@jake.otherinbox.com"
+		gem.email = "github@jakewendt.com"
 		gem.homepage = "http://github.com/jakewendt/simply_commentable"
 		gem.authors = ["George 'Jake' Wendt"]
 		# gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
@@ -34,7 +34,7 @@ begin
 		gem.test_files -= FileList['test/test_helper.rb']
 
 		gem.add_dependency('rails', '~> 2')
-
+		gem.add_dependency('rails_extension')
 	end
 	Jeweler::GemcutterTasks.new
 rescue LoadError
