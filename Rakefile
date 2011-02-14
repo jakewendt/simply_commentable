@@ -34,7 +34,7 @@ begin
 		gem.test_files -= FileList['test/test_helper.rb']
 
 		gem.add_dependency('rails', '~> 2')
-		gem.add_dependency('rails_extension')
+		gem.add_dependency('jakewendt-rails_extension')
 	end
 	Jeweler::GemcutterTasks.new
 rescue LoadError
